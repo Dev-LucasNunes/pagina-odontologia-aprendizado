@@ -17,6 +17,9 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+.clear{
+    clear: both;
+}
 
 /*cabeçalho*/
 .cabecalho{
@@ -183,10 +186,225 @@ section.tratamentos > h2{
     color: #b4b4b4;
 }
 
+/*depoimentos*/
+section.depoimentos{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+section.depoimentos .depoimento-box h2{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #688293;
+}
+section.depoimentos > .container{
+    padding: 20px 0;
+    text-align: center;
+    max-width: 400px;
+}
+section.depoimentos > .container .depoimento-box{
+    text-align: center;
+    position: relative;
+}
+.depoimento-box quote{
+    font-size: 1.5rem;
+    color: #b4b4b4;
+}
+.depoimento-box img:nth-of-type(2){
+    position: absolute;
+    right: -12px;
+}
+.depoimento-box .nome-depoimento{
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nome-depoimento img{
+    border: 1px solid #b4b4b4;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+.nome-depoimento span{
+    margin-left: 10px;
+    font-size: 1.3rem;
+    color: #b4b4b4;
+}
+.slide-bullets{
+    display: flex;
+    justify-content: center;
+}
+.slide-bullets > div{
+    margin: 5px;
+    background-color: #b4b4b4;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.slide-bullets > div:first-child{
+    background-color: black;
+}
 
+/*social*/
+section.social .insta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #98a5ae;
+}
+section.social .insta p{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+.social-mosaico{
+    float: left;
+    width: 100%
+}
+.social-mosaico .mosaico-box{
+    float: left;
+    background-color: #ccc;
+    width: calc(100% / 9);
+    padding-top: calc(100% / 9);
+    border: 6px solid white;
+}
+section.social .facebook{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #576976;
+}
+section.social .facebook p{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*contato*/
+.facebook-chamada p{
+	line-height: 2.3rem;
+	color: white;
+	padding:10px 0;
+	font-size: 1.3rem;
+}
+
+section.contato{
+	padding:60px 2%;
+}
+
+section.contato > h2{
+	color: #698293;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+section.contato form{
+	width: 100%;
+	margin: 30px auto;
+	max-width: 500px;
+}
+
+.form-wraper{
+	float: left;
+	padding:0 10px;
+	margin-top: 10px;
+}
+
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: 50%;
+}
+
+.form-wraper span{
+	font-size: 1.5rem;
+	color: #b4b4b4;
+}
+
+.form-wraper input[type=text]{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 9px;
+	border:1px solid #dadada;
+	margin-top:8px;
+}
+
+.form-wraper textarea{
+	width: 100%;
+	margin-top:8px;
+	padding:8px;
+	height: 121px;
+	resize: none;
+	border: 1px solid #dadada;
+	/*
+	resize: horizontal;
+	resize: vertical;
+	*/
+}
+
+.form-wraper input[type=submit]{
+	width: 100px;
+	display: inline-block;
+	height: 35px;
+	border: 0;
+	background: #688293;
+	color: white;
+	cursor: pointer;
+	/*
+	position: relative;
+	left: 50%;
+	transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	*/
+}
+
+footer{
+	padding:40px 2%;
+	background-color: #688293;
+}
+
+footer .container{
+	max-width: 1100px;
+}
+
+footer .footer-block{
+	float: left;
+	width: 33.3%;
+}
+
+.footer-block h2{
+	color: white;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.footer-block p{
+	margin-top:8px;
+	color: white;
+	font-size: 14px;
+}
 
 
 /*responsivo*/
+@media screen and (max-width: 1024px){
+    .social-mosaico .mosaico-box{
+        width: calc(100% / 6);
+        padding-top: calc(100% / 6);
+    }
+    .social-mosaico > div:nth-of-type(1n+7){ /*esconde a partir da 7 contando ela*/
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px){
     .nav1{
         display: none;
@@ -198,8 +416,8 @@ section.tratamentos > h2{
         max-width: 50px;
         cursor: pointer;
         position: relative;
-        top: 10px;
-        right: 10px;
+        top: 5px;
+        right:13px;
     }
     .hamburguer1,
     .hamburguer2,
@@ -242,7 +460,6 @@ section.tratamentos > h2{
     .menu.on .menu-hamburguer > div{
         background-color: #9fb7c7;
         transition: 1s;
-
     }
     .menu.on .menu-hamburguer .hamburguer1{
         transform: rotate(45deg) translate(8px, 7px);
@@ -278,7 +495,6 @@ section.tratamentos > h2{
         background-color: rgb(72, 82, 88);
         border-bottom:#ccc 3px solid;
         border-radius: 15px;
-
 }
     section.servicos > .container{
         max-width: 768px;
@@ -294,7 +510,7 @@ section.tratamentos > h2{
         padding: 40px 2%;
         background-color: #576975;
     }
-.servicos > .container .box-servicos:nth-of-type(2){
+    .servicos > .container .box-servicos:nth-of-type(2){
         width: 94%;
         padding:50px 2%;
 }
@@ -319,27 +535,39 @@ section.tratamentos > h2{
         text-align: justify;
         max-width: none;
 }
-section.videos{
-    height: 100vh;
+    section.videos{
+        height: 100vh;
+    }
+    .video-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+    }
+    section.videos .box-video{
+        width: 60%;
+        margin-top: 20px;
+    }
 }
-.video-container{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
+@media screen and (max-width: 650px){
+    .social-mosaico .mosaico-box{
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3);
+    }
+    .social-mosaico > div:nth-of-type(1n+4){ /*esconde a partir da 7 contando ela*/
+        display: none;
+    }
 }
-section.videos .box-video{
-    width: 60%;
-    margin-top: 20px;
+@media screen and (max-width: 545px){
+    .menu.on nav.nav1 ul li a{
+        padding-top: 20px;
+        font-size: 3.0rem;
 }
 }
 @media screen and (max-width: 470px){
     .cabecalho{
-        justify-content: center;
+        justify-content: space-between;
     }
-    header .cabecalho nav ul li{
-        padding: 0 0px;
-}
     header .cabecalho nav ul li a{
         margin: 5px;
     }
@@ -350,6 +578,41 @@ section.videos .box-video{
         width: 80%;
     }
 }
+@media screen and (max-width: 445px){
+    .menu.on nav.nav1 ul li a{
+        padding-top: 20px;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .menu.on nav.nav1 ul li a{
+        padding-top: 20px;
+        font-size: 2.0rem;
+    }
+    .menu.on nav.nav1 ul li a:hover{
+        background-color: rgb(72, 82, 88);
+        border-bottom:#ccc 3px solid;
+        border-radius: 15px;
+}
+}
+
+@media screen and (max-width: 445px){
+    .menu.on{
+        height: 120vh;
+    }
+    .menu.on nav.nav1 ul li a{
+        padding-top: 20px;
+        font-size: 1.7rem;
+    }
+    .menu.on nav.nav1 ul li a:hover{
+        background-color: rgb(72, 82, 88);
+        border-bottom:#ccc 3px solid;
+        border-radius: 15px;
+}
+}
+
+
 
 
 
