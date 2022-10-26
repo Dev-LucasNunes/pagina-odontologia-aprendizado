@@ -296,10 +296,11 @@ section.social .facebook p{
 
 section.contato{
 	padding:60px 2%;
+    background-color: #98a5ae;
 }
 
 section.contato > h2{
-	color: #698293;
+	color:white;
 	text-align: center;
 	font-size: 1.8rem;
 }
@@ -326,7 +327,7 @@ section.contato form{
 
 .form-wraper span{
 	font-size: 1.5rem;
-	color: #b4b4b4;
+	color: white;
 }
 
 .form-wraper input[type=text]{
