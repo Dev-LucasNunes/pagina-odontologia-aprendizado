@@ -577,6 +577,21 @@ footer .footer-block{
     section.videos .box-video{
         width: 80%;
     }
+    footer .container{
+        max-width: 1100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .footer-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: none;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 445px){
     .menu.on nav.nav1 ul li a{
